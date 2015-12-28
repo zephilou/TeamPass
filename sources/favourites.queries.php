@@ -14,6 +14,7 @@
 
 require_once 'sessions.php';
 session_start();
+require_once $_SESSION['settings']['cpassman_dir'].'/sources/main.functions.php';
 if (!isset($_SESSION['CPM']) || $_SESSION['CPM'] != 1 || !isset($_SESSION['key']) || empty($_SESSION['key'])) {
     die('Hacking attempt...');
 }
